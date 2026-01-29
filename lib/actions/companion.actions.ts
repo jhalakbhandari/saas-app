@@ -114,8 +114,8 @@ export const newCompanionPermissions = async () => {
   const supabase = createSupabaseClient();
 
   let limit = 0;
-
-  if (has({ plan: "pro" })) {
+  // const limit=3
+  if (has({ plan: "free_user" })) {
     return true;
   } else if (has({ feature: "3_companion_limit" })) {
     limit = 3;

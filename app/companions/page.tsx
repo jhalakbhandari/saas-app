@@ -10,7 +10,7 @@ const CompanionsLibrary = async ({ searchParams }: SearchParams) => {
   const subject = filters.subject ? filters.subject : "";
   const topic = filters.topic ? filters.topic : "";
   const companions = await getAllCompanions({ subject, topic });
-  
+
   // console.log("companion", companions);
   return (
     <main>
@@ -21,7 +21,7 @@ const CompanionsLibrary = async ({ searchParams }: SearchParams) => {
           <SubjectFilter />
         </div>
       </section>
-      <section>
+      <section className="flex flex-wrap home-section">
         {companions.map((companion) => (
           <CompanionCard
             key={companion.id}
