@@ -124,7 +124,7 @@ export const newCompanionPermissions = async () => {
   }
 
   const { data, error } = await supabase
-    .from("companions")
+    .from("Companions")
     .select("id", { count: "exact" })
     .eq("author", userId);
 
